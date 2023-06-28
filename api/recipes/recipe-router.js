@@ -9,21 +9,22 @@ router.get('/', (req, res) => {
         })
 })
 
+// router.get('/:id', (req, res) => {
+//     Recipes.getRecipeById(req.params.id)
+//         .then((recipe) => {
+//             res.status(200).json(recipe)
+//         })
+// })
+
+// router.get('/:id/steps', (req, res) => {
+//     Recipes.getStepsById(req.params.id)
+//         .then((steps) => {
+//             res.status(200).json(steps)
+//         })
+// })
+
+// finished product!!!
 router.get('/:id', (req, res) => {
-    Recipes.getRecipeById(req.params.id)
-        .then((recipe) => {
-            res.status(200).json(recipe)
-        })
-})
-
-router.get('/:id/steps', (req, res) => {
-    Recipes.getStepsById(req.params.id)
-        .then((steps) => {
-            res.status(200).json(steps)
-        })
-})
-
-router.get('/:id/test', (req, res) => {
     Recipes.getFullRecipeById(req.params.id)
         .then((recipe) => {
             res.status(200).json(recipe)
