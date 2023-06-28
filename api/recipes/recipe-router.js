@@ -23,6 +23,13 @@ router.get('/:id/steps', (req, res) => {
         })
 })
 
+router.get('/:id/test', (req, res) => {
+    Recipes.getFullRecipeById(req.params.id)
+        .then((recipe) => {
+            res.status(200).json(recipe)
+        })
+})
+
 
 module.exports = router;
   
